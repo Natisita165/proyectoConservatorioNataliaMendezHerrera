@@ -1,8 +1,9 @@
 <?php
 
 session_start();
+$_SESSION['usu']=-1;
 $sesionusu = $_SESSION['usu'];
-if($sesionusu){
+if($sesionusu>=0){
 	header('Location:Vista/usuario.php');
 }
 include 'Modelo/db.php';
