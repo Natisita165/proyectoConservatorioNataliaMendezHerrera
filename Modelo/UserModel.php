@@ -11,6 +11,11 @@ include_once 'db.php';
 				return false;
 			}
 		}
+		public function getSesion($user,$pass){
+			$sql = "SELECT idAdministrativo FROM Administrativo where nombre = '$user' and contraseña = '$pass'";
+			$result = $this->connect()->query($sql);
+			return $result;
+		}
 	}
 
 

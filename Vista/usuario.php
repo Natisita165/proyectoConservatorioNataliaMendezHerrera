@@ -1,4 +1,6 @@
 <?php
-echo 'Hola';
+session_start();
+
+echo 'Hola',$_SESSION['usu'];
 
 ?>

@@ -7,10 +7,10 @@
 		}else{
 			$user = new User;
 			if($user->getUser($username,$password)){
-				//session_start();
-				$_SESSION['usu'] = $username;
-				//header('Localtion:Vista/usuario.php');
-				echo '<meta http-equiv="refresh" content="0;url=Vista/usuario.php">';
+				$variable = $user->getSesion($username,$password);
+				//echo (string)$variable;
+				$_SESSION['usu'] = $variable;
+				echo '<meta http-equiv="refresh" content="0;url=Vista/Alumno.php">';
 			}else{
 				echo '<div class="error">El usuario no existe</div>';
 			}
