@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>PROFESOR</title>
-	<link rel="icon" href="../conserlogo.png">
-	<link rel="stylesheet" href="../css/profesorHome.css">
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+	<title>INICIO</title>
+	<link rel="icon" href="../IMG/conserlogo.png">
+	<link rel="stylesheet" href="../css/inicioAd.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body background="../IMG/logoagua.png">
@@ -13,16 +14,15 @@
 	<div id="header">
 		<div id="logo">
 			<img src="../IMG/usuarioF.png" width="100" height="100" alt="" />
-			<li></li>
-			<!--<?php   //echo utf8_decode($row['nombreP']); ?>-->
-		
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="infoAlumProfe.php" accesskey="1" title="">Información Alumnos</a></li>
-				<li><a href="notasAlumProfe.php" accesskey="2" title="">Ingreso Notas</a></li>
-				<li class="current_page_item"><a href="#" accesskey="3" title="">Principal</a></li>
-				<li><a href="logout.php" accesskey="4" title="">LogOut</a></li>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Principal</a></li>
+				<li><a href="#" accesskey="2" title="">Alumnos Moderna</a></li>
+				<li><a href="#" accesskey="3" title="">Alumnos Clásica</a></li>
+				<li><a href="#" accesskey="4" title="">Registro de Pago</a></li>
+				<li><a href="#" accesskey="5" title="">LogOut</a></li>
+				<li><a href="#" accesskey="6" title="">Nuevo Alumno</a></li>
 			</ul>
 		</div>
 	</div>
@@ -42,8 +42,8 @@
 			</ul>	
 </div>
 
-</div>
-</section>
-<script src="../js/bootstrap.min.js"></script>
+	</section>
+
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
