@@ -3,7 +3,7 @@ include_once 'db.php';
 	class User extends DB{
 		var $sql2;
 		public function getUser($user,$pass){
-			$sql = "SELECT * FROM Administrativo where nombre = '$user' and contraseña = '$pass'";
+			$sql = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass'";
 			$result = $this->connect()->query($sql);
 			$numrows = $result->num_rows;
 			if($numrows == 1){
@@ -13,12 +13,12 @@ include_once 'db.php';
 			}
 		}
 		public function getIdentifire($user,$pass){
-			$sql = "SELECT identificador FROM Administrativo where nombre = '$user' and contraseña = '$pass'";
+			$sql = "SELECT identificador FROM administrativo where nombre = '$user' and contraseña = '$pass'";
 			$result = $this->connect()->query($sql);
 			return $result;
 		}
 		public function getSesionAlumnoACA($user,$pass){
-			$sql2 = "SELECT * FROM Administrativo where nombre = '$user' and contraseña = '$pass' and identificador 'ACA'";
+			$sql2 = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass' and identificador = 'ACA'";
 			$result2 = $this->connect()->query($sql2);
 			//$numrows2 = $result2->num_rows;
 			$row2 = $result2->fetch_assoc();
@@ -26,7 +26,7 @@ include_once 'db.php';
 			return $name2;
 		}
 		public function getSesionAlumnoMOD($user,$pass){
-			$sql3 = "SELECT * FROM Administrativo where nombre = '$user' and contraseña = '$pass' and identificador 'MOD'";
+			$sql3 = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass' and identificador = 'MOD'";
 			$result3 = $this->connect()->query($sql3);
 			//$numrows3 = $result3->num_rows;
 			$row3 = $result3->fetch_assoc();
@@ -34,7 +34,7 @@ include_once 'db.php';
 			return $name3;
 		}
 		public function getSesionProfesor($user,$pass){
-			$sql4 = "SELECT * FROM Administrativo where nombre = '$user' and contraseña = '$pass' and identificador 'PRO'";
+			$sql4 = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass' and identificador = 'PRO'";
 			$result4 = $this->connect()->query($sql4);
 			//$numrows4 = $result4->num_rows;
 			$row4 = $result4->fetch_assoc();
@@ -42,7 +42,7 @@ include_once 'db.php';
 			return $name4;
 		}
 		public function getSesionAdmi($user,$pass){
-			$sql5 = "SELECT * FROM Administrativo where nombre = '$user' and contraseña = '$pass' and identificador 'ADM'";
+			$sql5 = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass' and identificador = 'ADM'";
 			$result5 = $this->connect()->query($sql5);
 			//$numrows5 = $result5->num_rows;
 			$row5 = $result5->fetch_assoc();

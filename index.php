@@ -9,7 +9,6 @@ $sesionusu = $_SESSION['usu'];
 include 'Modelo/db.php';
 include 'Modelo/UserModel.php';
 include 'Controlador/UserContro.php';
-
 ?>
 
 <!DOCTYPE html>
