@@ -15,7 +15,9 @@ include_once 'db.php';
 		public function getIdentifire($user,$pass){
 			$sql = "SELECT identificador FROM administrativo where nombre = '$user' and contraseña = '$pass'";
 			$result = $this->connect()->query($sql);
-			return $result;
+			$row2 = $result->fetch_assoc();
+            $valor=$row2['identificador'];
+            return $valor;
 		}
 		public function getSesionAlumnoACA($user,$pass){
 			$sql2 = "SELECT * FROM administrativo where nombre = '$user' and contraseña = '$pass' and identificador = 'ACA'";

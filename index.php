@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-//$_SESSION['usu']=-1;
-$sesionusu = $_SESSION['usu'];
-//if($sesionusu>=0){
-//	header('Location:Vista/Alumno.php');
-//}
+$_SESSION['usu']=-1;
+
+//$sesionusu = $_SESSION['usu']; 
+
+
 include 'Modelo/db.php';
 include 'Modelo/UserModel.php';
 include 'Controlador/UserContro.php';
